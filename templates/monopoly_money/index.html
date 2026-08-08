@@ -1,0 +1,38 @@
+{% load sass_tags %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monopoly_Money</title>
+    <link rel="stylesheet" href="{% sass_src 'monopoly_money/scss/style.scss' %}" />
+  </head>
+  <body>
+    <header>
+    <h1>Monopoly Money</h1>
+    </header>
+    <form>
+      <div>
+      <label for="name">Enter Your Name:</label>
+      <div class="input">
+      <input type="text" id="name" placeholder="Enter Your Name" />
+      </div>
+      </div>
+      <div>
+      <label for="create_room">Create a room:</label>
+      <div class="input">
+      <input type="text" id="create_room" placeholder="Create Room ID" />
+      </div>
+      </div>
+      <div>
+      <label for="join_room">Join room:</label>
+      <div class="input">
+      <input type="text" id="join_room" placeholder="Enter Room ID" />
+      </div>
+      </div>
+      <div id="button">
+      <button type="submit">Next</button>
+      </div>
+    </form>
+  </body>
+</html>
