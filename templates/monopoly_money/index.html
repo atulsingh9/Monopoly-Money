@@ -7,27 +7,28 @@
     <title>Monopoly_Money</title>
     <link rel="stylesheet" href="{% sass_src 'monopoly_money/scss/style.scss' %}" />
   </head>
-  <body>
+  <body id="index">
     <header>
     <h1>Monopoly Money</h1>
     </header>
-    <form>
+    <form action="{% url 'monopoly_money:index' %}" method="post">
+      {% csrf_token %}
       <div>
       <label for="name">Enter Your Name:</label>
       <div class="input">
-      <input type="text" id="name" placeholder="Enter Your Name" />
+      <input type="text" id="name" name="name" placeholder="Enter Your Name" />
       </div>
       </div>
       <div>
       <label for="create_room">Create a room:</label>
       <div class="input">
-      <input type="text" id="create_room" placeholder="Create Room ID" />
+      <input type="text" id="create_room" name="create_room" placeholder="Create Room ID" />
       </div>
       </div>
       <div>
       <label for="join_room">Join room:</label>
       <div class="input">
-      <input type="text" id="join_room" placeholder="Enter Room ID" />
+      <input type="text" id="join_room" name="join_room" placeholder="Enter Room ID" />
       </div>
       </div>
       <div id="button">
